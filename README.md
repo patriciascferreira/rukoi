@@ -10,17 +10,6 @@
 - **WhatsApp (pedidos - bombom):** +55 11 97067-7547 (atualmente configurado no site)
 - **GitHub (desenvolvedora):** https://github.com/patriciascferreira
 
-**Como usar / publicar**
-
-- O site já está publicado via GitHub Pages na URL acima. Para atualizar o README e enviar ao repositório:
-
-```powershell
-cd "C:\Users\Felipe\OneDrive\Imagens\Tecnologia da Informação (TI)\Projeito bombom"
-git add README.md
-git commit -m "docs: Atualizar README com documentação"
-git push origin main
-```
-
 **Arquivos principais**
 
 - `index.html`: página inicial com grid de produtos e botão do carrinho.
@@ -100,13 +89,6 @@ git push origin main
 - ✅ Testes automatizados: pequenas suítes unitárias para utilitários (ex.: cálculo de total) e E2E para fluxo de compra.
 - ✅ CI/CD: adicionar GitHub Action para rodar lint, testes e deploy automático para `gh-pages` (opcional).
 - ✅ Internacionalização: extrair textos para permitir traduções futuras.
-
-**Checklist rápido antes de publicar alterações**
-
-- [ ] Verificar `WHATS_NUM` e substituir pelo número correto se necessário.
-- [ ] Implementar `initProduct()` / `initCheckout()` se quiser funcionalidade de páginas independentes.
-- [ ] Otimizar imagens em `imagens/`.
-- [ ] Rodar `git add . && git commit -m "docs: atualizar README" && git push`.
 
 ---
 
