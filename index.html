@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RUKOI — Menu Premium</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="logo-area">
+      <img src="imagens/rukoi-logo.jpeg" alt="RUKOI" class="logo">
+    </div>
+
+    <div class="actions">
+      <button id="openCart" class="mini-cart" aria-label="Abrir carrinho">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Menu RUKOI</h1>
+        <p class="subtitle">Bombons artesanais — sabores exclusivos feitos com cuidado.</p>
+      </div>
+    </section>
+
+    <section class="menu-title">
+      <h2>Seleção de Bombons</h2>
+      <p class="lead">Escolha e adicione ao carrinho — envio direto para WhatsApp.</p>
+    </section>
+
+    <section id="productGrid" class="produtos" aria-live="polite">
+      <!-- Produtos renderizados pelo script -->
+    </section>
+  </main>
+
+  <!-- Carrinho pop-up -->
+  <aside id="cartBox" class="cart-box hidden" role="dialog" aria-hidden="true">
+    <h3>Seu Carrinho</h3>
+    <ul id="cartItems" class="lista-carrinho"></ul>
+    <div class="cart-footer">
+      <p class="total">Total: R$ <span id="cartTotal">0.00</span></p>
+      <div class="cart-actions">
+        <button id="closeCart" class="btn-outline">Fechar</button>
+        <button id="sendWhats" class="btn-primary">Enviar pedido via WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a class="whatsapp-btn" id="whatsappFloat" href="https://wa.me/5511970677547" target="_blank" aria-label="WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff"
+        d="M12.04 2C6.5 2 2 6.48 2 12.02c0 2.12.55 4.11 1.61 5.86L2 22l4.38-1.43c1.67.92 3.57 1.45 5.66 1.45 5.54 0 10.04-4.48 10.04-9.99C22.08 6.48 17.58 2 12.04 2zM16.8 15.35c-.28.78-1.58 1.5-2.17 1.59-.57.09-1.14.13-2.06-.14-2.85-.88-4.7-3.84-4.84-4.01-.13-.18-1.1-1.39-1.1-2.66 0-1.27.68-1.89.92-2.15.24-.26.53-.33.72-.33.18 0 .37.01.53.01.17 0 .4-.06.62.45.22.5.74 1.73.8 1.86.06.13.1.28.02.44-.08.16-.13.26-.25.4-.12.14-.26.31-.38.44-.13.13-.26.28-.12.56.14.28.62 1.03 1.33 1.64.9.76 1.66 1 2.01 1.12.35.12.6.1.82-.06.22-.16.88-.5 1.01-.56.13-.07.22-.1.34.06.12.16.48.56.64.75.16.19.27.36.2.56z" />
+    </svg>
+  </a>
+
+  <footer class="footer">
+    <p>© <strong>RUKOI</strong> • Chocolateria Gourmet</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>if (typeof initIndex === 'function') initIndex();</script>
+</body>
+
+</html>

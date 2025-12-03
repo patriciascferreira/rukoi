@@ -1,0 +1,323 @@
+/* THEME: RUKOI — LUXURY CHOCOLATE */
+:root {
+  --bg: #f6efe6;
+  --dark: #2f1b10;
+  --brown: #5b3a23;
+  --gold: #d8c5a6;
+  --white: #ffffff;
+  --card: #fffaf6;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cinzel", "Segoe UI", Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* header */
+.topo {
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.logo {
+  height: 58px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* mini cart */
+.mini-cart {
+  background: var(--brown);
+  border: 1px solid var(--gold);
+  padding: 10px 12px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  cursor: pointer;
+}
+.badge {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+/* hero */
+.hero {
+  padding: 28px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.hero-text h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+.subtitle {
+  margin-top: 6px;
+  color: #6b4d3f;
+}
+
+/* section titles */
+.menu-title {
+  text-align: center;
+  padding: 8px 6% 0;
+}
+.menu-title h2 {
+  margin: 6px 0 4px;
+  font-size: 20px;
+  color: var(--dark);
+}
+.menu-title .lead {
+  margin: 0;
+  color: #6b4d3f;
+}
+
+/* products grid */
+.produtos {
+  width: 92%;
+  margin: 20px auto 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* card style B - luxury */
+.card {
+  background: linear-gradient(180deg, var(--card), #fff);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s, box-shadow 0.28s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
+}
+.card .top-ribbon {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* image */
+.foto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.card h3 {
+  margin: 12px 0 6px;
+  font-size: 20px;
+  color: var(--dark);
+  letter-spacing: 0.6px;
+}
+.card p.desc {
+  font-size: 14px;
+  color: #6b4d3f;
+  margin: 0 0 12px;
+  min-height: 48px;
+}
+
+/* price area */
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+.price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--brown);
+}
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+/* buttons */
+.btn {
+  background: var(--brown);
+  color: var(--white);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.12s;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--brown);
+  color: var(--brown);
+}
+
+/* flying image animation helper */
+.flying-img {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+  transition: transform 0.9s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.9s;
+}
+
+/* cart popup */
+.cart-box {
+  position: fixed;
+  top: 84px;
+  right: 20px;
+  width: 360px;
+  background: var(--white);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+  z-index: 40;
+}
+.hidden {
+  display: none;
+}
+.lista-carrinho {
+  padding-left: 0;
+  list-style: none;
+}
+.lista-carrinho li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+.qtd-area {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.qtd-btn {
+  background: var(--brown);
+  color: var(--white);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.qtd-num {
+  min-width: 26px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark);
+}
+.cart-footer {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.btn-primary {
+  background: var(--brown);
+  color: var(--white);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #e6dcd2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* whatsapp floating */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d365, #128c7e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 30px 50px rgba(44, 250, 3, 0);
+  z-index: 60;
+  text-decoration: none;
+}
+.whatsapp-icon {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 6px rgba(00, 0, 0, 0.3));
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 22px;
+  color: #516b3f;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero {
+    padding: 18px;
+  }
+  .produtos {
+    width: 95%;
+    gap: 18px;
+  }
+  .cart-box {
+    width: 92%;
+    left: 4%;
+    right: 4%;
+    top: auto;
+    bottom: 20px;
+  }
+}

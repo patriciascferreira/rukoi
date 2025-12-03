@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RUKOI — Finalizar Pedido</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="logo-area">
+      <a href="index.html"><img src="imagens/rukoi-logo.jpeg" alt="RUKOI" class="logo"></a>
+    </div>
+    <button id="openCart" class="mini-cart" aria-label="Abrir carrinho">
+      <span class="cart-icon">🛒</span>
+      <span id="cartCount" class="badge">0</span>
+    </button>
+  </header>
+
+  <main class="checkout-main">
+    <section class="checkout-left">
+      <h2>Seu Pedido</h2>
+      <ul id="checkoutItems" class="checkout-items"></ul>
+      <p class="total">Total: R$ <span id="checkoutTotal">0.00</span></p>
+    </section>
+
+    <section class="checkout-right">
+      <h2>Dados para entrega</h2>
+      <form id="orderForm">
+        <label>Nome</label>
+        <input type="text" id="custName" required>
+
+        <label>Telefone (WhatsApp)</label>
+        <input type="tel" id="custPhone" placeholder="(11) 9xxxx-xxxx" required>
+
+        <label>Endereço</label>
+        <textarea id="custAddress" rows="3" required></textarea>
+
+        <label>Observações (opcional)</label>
+        <textarea id="custNotes" rows="2"></textarea>
+
+        <button type="submit" class="finalizar">Enviar pedido via WhatsApp</button>
+      </form>
+
+      <div id="orderSuccess" class="order-success hidden">
+        <h3>Pedido preparado!</h3>
+        <p>Obrigado! Abriremos o WhatsApp com sua mensagem.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <strong>RUKOI</strong> • Chocolateria </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>initCheckout && initCheckout();</script>
+</body>
+
+</html>
