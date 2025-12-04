@@ -322,3 +322,39 @@ body {
     bottom: 20px;
   }
 }
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6b4423;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background-color: #8b5a2b;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(107, 68, 35, 0.3);
+}
+
+.social-links a:active {
+  transform: scale(0.95);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
